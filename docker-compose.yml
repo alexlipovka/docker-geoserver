@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  tomcat:
+    image: tomcat:9.0-jdk17-corretto
+    ports:
+      - 80:8080
+    volumes:
+      - ./war/:/usr/local/tomcat/webapps/
+      - ./data/:/usr/local/tomcat/geoserver/data/
+    command: /bin/sh -c "catalina.sh run"
+volumes:
+  war:
+  data:
