@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   tomcat:
-    image: tomcat:9.0-jdk17-corretto
+    image: tomcat:9.0-jre17-temurin-focal
     ports:
       - 8080:8080
     volumes:
