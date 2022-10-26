@@ -5,3 +5,4 @@ wget https://build.geoserver.org/geoserver/main/geoserver-main-latest-war.zip -O
 unzip ./temp/geoserver.war.zip -d ./temp/
 mkdir ./war
 mv ./temp/geoserver.war ./war/
+rm -rf ./temp/
