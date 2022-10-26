@@ -8,6 +8,7 @@ services:
       - ./war/:/usr/local/tomcat/webapps/
       - ./data/:/usr/local/tomcat/geoserver/data/
     command: /bin/sh -c "catalina.sh run"
+    restart: always
 volumes:
   war:
   data:
