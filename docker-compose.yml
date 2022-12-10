@@ -2,11 +2,17 @@ version: "3.3"
 services:
   tomcat:
     image: tomcat:9.0-jre17-temurin-focal
-    ports:
-      - 8080:8080
+    container_name: geoserver
+    # ports:
+    #   - 8080:8080
     volumes:
       - ./war/:/usr/local/tomcat/webapps/
     command: /bin/sh -c "catalina.sh run"
     restart: always
+    networks:
+      - webgis
 volumes:
   war:
+networks:
+  webgis:
+    external: true
